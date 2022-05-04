@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <!--
+        超链接下载
+            a标签在遇到浏览器能够识别的标签时，会直接打开资源；否则，会进行下载
+
+            download属性
+                可以设置a标签的download属性，让超链接执行下载操作。
+                如果设置了download属性值，则下载的文件名为对应的属性值；否则，下载的文件名为文件原本的名称。
+    -->
+    <h3>超链接下载</h3>
+    <!--浏览器能够识别的资源-->
+    <a href="download/bingbing02.jpg">王冰冰图片</a>
+    <a href="test.txt">文本</a>
+    <!--浏览器不能识别的资源-->
+    <a href="test.zip">压缩包</a>
+
+    <a href="download/bingbing02.jpg" download="冰冰.jpg">下载王冰冰图片</a>
+    <a href="test.txt" download>下载文本</a>
+
+    <hr>
+    <form action="downloadServlet">
+        文件名：<input type="text" name="fileName">
+        <button>下载</button>
+    </form>
+</body>
+</html>
